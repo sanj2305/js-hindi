@@ -70,3 +70,64 @@ console.log(typeof [0,1,2,3,4,5,])                //returns object
 // console.log(typeof value);        // returns object
 // let temp;
 // console.log(typeof temp);          // returns undefined
+// NOTE: null and undefined are same in value but different in type.
+console.log(null == undefined);    //returns true
+console.log(null === undefined);    //returns false
+
+//link to study
+// tc39.es/ecma262
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//----------------------------Memory -------------------------------------------------------------------
+// Stack (primitive) , Heap(non-primitive)
+
+// let myYoutubename = "sanjanapatil"
+// let anotherName = myYoutubename
+// console.log(anotherName);
+
+// anotherName = "changedName"
+// console.log(myYoutubename);
+// console.log(anotherName);
+// // here the original value remains unchanged whereas the copied value changes to the newest assigned value of anotherName.
+// // This is how stack works. the reference is not changed whereas the copied value only get changed.
+
+
+// let userOne = {
+//     email : "original@google.com"
+//     upi: "user@ybl"
+// }
+
+// userTwo = userOne;
+// userTwo.email = "change@google.com"
+
+// console.log(userTwo.email);
+// console.log(userOne.email);
+
+
+
+let a = 1;
+let b = 2;
+let c = 3;
+a = b 
+b = c
+console.log(b)
+
+let myName = "sita"
+let myFriend = "geeta"
+myFriend = myName;
+console.log(myName);
+
+let obj = {
+    name : 'aba',
+    age: 20,
+    subject: 'social'
+}
+
+obj.name = 'baba'
+console.log(obj.name); // returns baba
+
+newObj = obj;
+newObj.name = 'cia'
+console.log(newObj.name);
+console.log(obj.name);
+// NOTE: In heap memory, where objects are located. any changes made in the object will reflect directly in the refernce copy. 
